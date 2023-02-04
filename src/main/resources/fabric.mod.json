@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "custom-items",
+  "version": "${version}",
+  "name": "CustomItems",
+  "description": "The custom items tutorial",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/custom-items/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.kodysimpson.customitems.client.CustomItemsClient"
+    ],
+    "main": [
+      "me.kodysimpson.customitems.CustomItems"
+    ]
+  },
+  "mixins": [
+    "custom-items.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.13",
+    "fabric": "*",
+    "minecraft": "1.19.3"
+  }
+}
