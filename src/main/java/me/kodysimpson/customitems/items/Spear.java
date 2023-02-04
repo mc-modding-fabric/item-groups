@@ -28,14 +28,6 @@ public class Spear extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 
-        //The world, user, and hand parameters are all passed in automatically by the game.
-        //The world is the world that the player is in
-        //The user is the player that is using the item
-        //The hand is the hand that the player is using to use the item
-
-        //Now, you can do whatever you want.
-
-        //See which hand the player is using
         if (hand == Hand.MAIN_HAND){
             user.playSound(SoundEvents.BLOCK_AMETHYST_BLOCK_HIT, 1.0f, 1.0f);
             user.sendMessage(Text.of("Wooosh!!!"));
@@ -45,7 +37,6 @@ public class Spear extends Item {
             user.sendMessage(Text.of("You speared yourself! Ouch. You died."));
         }
 
-        //Indicate that the item was used successfully
         return TypedActionResult.success(user.getStackInHand(hand));
     }
 }
